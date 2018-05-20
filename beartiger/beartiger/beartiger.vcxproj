@@ -168,6 +168,12 @@
   <ItemGroup>
     <Image Include="background_day.bmp" />
     <Image Include="beartiger.ico" />
+    <Image Include="bear_attack1.bmp" />
+    <Image Include="bear_attack2.bmp" />
+    <Image Include="bear_attack3.bmp" />
+    <Image Include="bear_attack4.bmp" />
+    <Image Include="bear_attack5.bmp" />
+    <Image Include="bear_attack6.bmp" />
     <Image Include="bear_walk1.bmp" />
     <Image Include="bear_walk2.bmp" />
     <Image Include="bear_walk3.bmp" />
