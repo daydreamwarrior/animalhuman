@@ -87,10 +87,22 @@
     <Image Include="tiger_Walk6.bmp">
       <Filter>리소스 파일</Filter>
     </Image>
-    <Image Include="garlic.bmp">
+    <Image Include="bear_attack1.bmp">
       <Filter>리소스 파일</Filter>
     </Image>
-    <Image Include="tiger_dieing.bmp">
+    <Image Include="bear_attack2.bmp">
+      <Filter>리소스 파일</Filter>
+    </Image>
+    <Image Include="bear_attack3.bmp">
+      <Filter>리소스 파일</Filter>
+    </Image>
+    <Image Include="bear_attack4.bmp">
+      <Filter>리소스 파일</Filter>
+    </Image>
+    <Image Include="bear_attack5.bmp">
+      <Filter>리소스 파일</Filter>
+    </Image>
+    <Image Include="bear_attack6.bmp">
       <Filter>리소스 파일</Filter>
     </Image>
   </ItemGroup>
