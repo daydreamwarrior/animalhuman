@@ -105,5 +105,17 @@
     <Image Include="bear_attack6.bmp">
       <Filter>리소스 파일</Filter>
     </Image>
+    <Image Include="tiger_Attack1.bmp">
+      <Filter>리소스 파일</Filter>
+    </Image>
+    <Image Include="tiger_Attack2.bmp">
+      <Filter>리소스 파일</Filter>
+    </Image>
+    <Image Include="tiger_Attack3.bmp">
+      <Filter>리소스 파일</Filter>
+    </Image>
+    <Image Include="tiger_Attack4.bmp">
+      <Filter>리소스 파일</Filter>
+    </Image>
   </ItemGroup>
 </Project>
