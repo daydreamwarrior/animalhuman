@@ -123,5 +123,8 @@
     <Image Include="bear_attack6.bmp">
       <Filter>리소스 파일</Filter>
     </Image>
+    <Image Include="garlicssuk.bmp">
+      <Filter>리소스 파일</Filter>
+    </Image>
   </ItemGroup>
 </Project>

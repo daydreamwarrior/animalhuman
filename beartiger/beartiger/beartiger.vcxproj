@@ -180,6 +180,7 @@
     <Image Include="bear_walk4.bmp" />
     <Image Include="bear_walk5.bmp" />
     <Image Include="bear_walk6.bmp" />
+    <Image Include="garlicssuk.bmp" />
     <Image Include="small.ico" />
     <Image Include="tiger_Walk1.bmp" />
     <Image Include="tiger_Walk2.bmp" />
