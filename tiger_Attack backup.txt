@@ -1,0 +1,378 @@
+// beartiger.cpp: 응용 프로그램의 진입점을 정의합니다.
+//
+#pragma comment(lib, "msimg32.lib")
+#include "stdafx.h"
+#include "beartiger.h"
+#include "Resource.h"
+#include <atlimage.h>
+#include <tchar.h>
+
+
+#define MAX_LOADSTRING 100
+#define WIDTH 800
+#define HEIGHT 800
+
+// 전역 변수:
+HINSTANCE hInst;                                // 현재 인스턴스입니다.
+WCHAR szTitle[MAX_LOADSTRING];                  // 제목 표시줄 텍스트입니다.
+WCHAR szWindowClass[MAX_LOADSTRING];            // 기본 창 클래스 이름입니다.
+
+												// 이 코드 모듈에 들어 있는 함수의 정방향 선언입니다.
+ATOM                MyRegisterClass(HINSTANCE hInstance);
+BOOL                InitInstance(HINSTANCE, int);
+LRESULT CALLBACK    WndProc(HWND, UINT, WPARAM, LPARAM);
+INT_PTR CALLBACK    About(HWND, UINT, WPARAM, LPARAM);
+
+int APIENTRY wWinMain(_In_ HINSTANCE hInstance,
+	_In_opt_ HINSTANCE hPrevInstance,
+	_In_ LPWSTR    lpCmdLine,
+	_In_ int       nCmdShow)
+{
+	UNREFERENCED_PARAMETER(hPrevInstance);
+	UNREFERENCED_PARAMETER(lpCmdLine);
+
+	// TODO: 여기에 코드를 입력합니다.
+
+	// 전역 문자열을 초기화합니다.
+	LoadStringW(hInstance, IDS_APP_TITLE, szTitle, MAX_LOADSTRING);
+	LoadStringW(hInstance, IDC_BEARTIGER, szWindowClass, MAX_LOADSTRING);
+	MyRegisterClass(hInstance);
+
+	// 응용 프로그램 초기화를 수행합니다.
+	if (!InitInstance(hInstance, nCmdShow))
+	{
+		return FALSE;
+	}
+
+	HACCEL hAccelTable = LoadAccelerators(hInstance, MAKEINTRESOURCE(IDC_BEARTIGER));
+
+	MSG msg;
+
+	// 기본 메시지 루프입니다.
+	while (GetMessage(&msg, nullptr, 0, 0))
+	{
+		if (!TranslateAccelerator(msg.hwnd, hAccelTable, &msg))
+		{
+			TranslateMessage(&msg);
+			DispatchMessage(&msg);
+		}
+	}
+
+	return (int)msg.wParam;
+}
+
+
+
+//
+//  함수: MyRegisterClass()
+//
+//  목적: 창 클래스를 등록합니다.
+//
+ATOM MyRegisterClass(HINSTANCE hInstance)
+{
+	WNDCLASSEXW wcex;
+
+	wcex.cbSize = sizeof(WNDCLASSEX);
+
+	wcex.style = CS_HREDRAW | CS_VREDRAW;
+	wcex.lpfnWndProc = WndProc;
+	wcex.cbClsExtra = 0;
+	wcex.cbWndExtra = 0;
+	wcex.hInstance = hInstance;
+	wcex.hIcon = LoadIcon(hInstance, MAKEINTRESOURCE(IDI_BEARTIGER));
+	wcex.hCursor = LoadCursor(nullptr, IDC_ARROW);
+	wcex.hbrBackground = (HBRUSH)(COLOR_WINDOW + 1);
+	wcex.lpszMenuName = nullptr;// MAKEINTRESOURCEW(IDC_BEARTIGER);
+	wcex.lpszClassName = szWindowClass;
+	wcex.hIconSm = LoadIcon(wcex.hInstance, MAKEINTRESOURCE(IDI_SMALL));
+
+	return RegisterClassExW(&wcex);
+}
+
+//
+//   함수: InitInstance(HINSTANCE, int)
+//
+//   목적: 인스턴스 핸들을 저장하고 주 창을 만듭니다.
+//
+//   설명:
+//
+//        이 함수를 통해 인스턴스 핸들을 전역 변수에 저장하고
+//        주 프로그램 창을 만든 다음 표시합니다.
+//
+BOOL InitInstance(HINSTANCE hInstance, int nCmdShow)
+{
+	hInst = hInstance; // 인스턴스 핸들을 전역 변수에 저장합니다.
+
+	HWND hWnd = CreateWindowW(szWindowClass, szTitle, WS_OVERLAPPEDWINDOW,
+		350, 10, WIDTH, HEIGHT, nullptr, nullptr, hInstance, nullptr);
+
+	if (!hWnd)
+	{
+		return FALSE;
+	}
+
+	ShowWindow(hWnd, nCmdShow);
+	UpdateWindow(hWnd);
+
+	return TRUE;
+}
+
+struct Animal {
+	int xPos, yPos;//좌표
+	int movingCount, attackCount;//비트맵애니메이션 카운트
+	HBITMAP Walk[6], Attack[6];//비트맵애니메이션 _ 비트맵배열
+	bool isAttack;//공격키가 눌렸는지 검사
+};
+
+Animal bear;
+Animal tiger;
+
+struct Garlic {
+	int xPos, yPos;
+};
+
+Garlic garlics[50];
+
+//투명화 구조체 BLENDFUNCTION
+
+//struct BLENDFUNCTION {
+//	BYTE BlendOp; // 그냥 AC_SRC_OVER
+//	BYTE BlendFlags; // 그냥 0
+//	BYTE SourceConstantAlpha; // 0 ~ 255 값이며 0이면 아에 안보이고, 255면 투명도를 적용 안한거랑 같다.
+//	BYTE AlphaFormat; // 그냥 0
+//};
+
+void bearAnimation(int xPos, int yPos, HDC hdc) {
+	HDC memDC;
+	HBITMAP oldBit;
+
+	bear.movingCount++;
+	bear.movingCount = bear.movingCount % 6;
+	bear.Walk[0] = LoadBitmap(hInst, MAKEINTRESOURCE(IDB_BITMAP1));
+	bear.Walk[1] = LoadBitmap(hInst, MAKEINTRESOURCE(IDB_BITMAP2));
+	bear.Walk[2] = LoadBitmap(hInst, MAKEINTRESOURCE(IDB_BITMAP3));
+	bear.Walk[3] = LoadBitmap(hInst, MAKEINTRESOURCE(IDB_BITMAP4));
+	bear.Walk[4] = LoadBitmap(hInst, MAKEINTRESOURCE(IDB_BITMAP5));
+	bear.Walk[5] = LoadBitmap(hInst, MAKEINTRESOURCE(IDB_BITMAP6));
+
+	memDC = CreateCompatibleDC(hdc);
+
+	(HBITMAP)SelectObject(memDC, bear.Walk[bear.movingCount]);
+	TransparentBlt(hdc, xPos, yPos, 85, 65, memDC, 0, 0, 85, 65, RGB(0, 64, 128));
+
+	for (int i = 0; i < 6; i++)
+		DeleteObject(bear.Walk[i]);
+	DeleteDC(memDC);
+}
+
+void bearAttack(int xPos, int yPos, HDC hdc) {
+	HDC memDC;
+	HBITMAP oldBit;
+
+	bear.attackCount++;
+	bear.Attack[0] = LoadBitmap(hInst, MAKEINTRESOURCE(IDB_BITMAP17));
+	bear.Attack[1] = LoadBitmap(hInst, MAKEINTRESOURCE(IDB_BITMAP18));
+	bear.Attack[2] = LoadBitmap(hInst, MAKEINTRESOURCE(IDB_BITMAP19));
+	bear.Attack[3] = LoadBitmap(hInst, MAKEINTRESOURCE(IDB_BITMAP20));
+	bear.Attack[4] = LoadBitmap(hInst, MAKEINTRESOURCE(IDB_BITMAP21));
+	bear.Attack[5] = LoadBitmap(hInst, MAKEINTRESOURCE(IDB_BITMAP22));
+
+	memDC = CreateCompatibleDC(hdc);
+
+	(HBITMAP)SelectObject(memDC, bear.Attack[bear.attackCount]);
+	TransparentBlt(hdc, xPos, yPos, 90, 80, memDC, 0, 0, 90, 80, RGB(0, 64, 128));
+
+	if (bear.attackCount == 5) {
+		bear.attackCount = -1;
+		bear.isAttack = false;
+	}
+	for (int i = 0; i < 6; i++)
+		DeleteObject(bear.Attack[i]);
+	DeleteDC(memDC);
+}
+
+void tigerAnimation(int xPos, int yPos, HDC hdc) {
+
+	HDC memDC;
+	HBITMAP oldBit;
+
+	tiger.movingCount++;
+	tiger.movingCount = tiger.movingCount % 6;
+	tiger.Walk[0] = LoadBitmap(hInst, MAKEINTRESOURCE(IDB_BITMAP8));
+	tiger.Walk[1] = LoadBitmap(hInst, MAKEINTRESOURCE(IDB_BITMAP9));
+	tiger.Walk[2] = LoadBitmap(hInst, MAKEINTRESOURCE(IDB_BITMAP10));
+	tiger.Walk[3] = LoadBitmap(hInst, MAKEINTRESOURCE(IDB_BITMAP11));
+	tiger.Walk[4] = LoadBitmap(hInst, MAKEINTRESOURCE(IDB_BITMAP12));
+	tiger.Walk[5] = LoadBitmap(hInst, MAKEINTRESOURCE(IDB_BITMAP13));
+
+	memDC = CreateCompatibleDC(hdc);
+
+	(HBITMAP)SelectObject(memDC, tiger.Walk[tiger.movingCount]);
+	TransparentBlt(hdc, xPos, yPos, 125, 70, memDC, 0, 0, 125, 70, RGB(39, 87, 207));
+
+	//삭제
+	for (int i = 0; i < 6; i++)
+		DeleteObject(tiger.Walk[i]);
+	DeleteDC(memDC);
+}
+
+void tigerAttack(int xPos, int yPos, HDC hdc) {
+	HDC memDC;
+	HBITMAP oldBit;
+
+	tiger.attackCount++;
+	tiger.Attack[0] = LoadBitmap(hInst, MAKEINTRESOURCE(IDB_BITMAP23));
+	tiger.Attack[1] = LoadBitmap(hInst, MAKEINTRESOURCE(IDB_BITMAP24));
+	tiger.Attack[2] = LoadBitmap(hInst, MAKEINTRESOURCE(IDB_BITMAP25));
+	tiger.Attack[3] = LoadBitmap(hInst, MAKEINTRESOURCE(IDB_BITMAP26));
+
+	memDC = CreateCompatibleDC(hdc);
+
+	(HBITMAP)SelectObject(memDC, tiger.Attack[tiger.attackCount]);
+	TransparentBlt(hdc, xPos, yPos, 150, 75, memDC, 0, 0, 150, 75, RGB(39, 87, 207));
+
+	if (tiger.attackCount == 5) {
+		tiger.attackCount = -1;
+		tiger.isAttack = false;
+	}
+	for (int i = 0; i < 6; i++)
+		DeleteObject(tiger.Attack[i]);
+	DeleteDC(memDC);
+}
+LRESULT CALLBACK WndProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam)
+{
+	HDC hdc, memDC;
+	PAINTSTRUCT ps;
+	HBITMAP hBit, oldBit;
+	CHAR str[] = "동물이라도 인간이하고싶어";
+	LOGFONT lf;
+	HFONT font, oldfont;
+
+	//FONT {//폰트 함수 인수 설명~
+
+	//CreateFont(height, width, escapement, orientation, weight,italic, underline, strikeout,
+	//charset, outprecision, clipprecison, quality, pitchandgroup, name);
+
+	//Height  폰트의 높이 지정. 폰트크기라고생각하면됨
+	//width  폰트의 폭, 0이면 nheight를 따라 자동 지정
+	//eescapement  x측과 문자열 각도(가로쓰기 세로쓰기 설정할수있겟쬬~~
+	//orientation  폰트의 무게(두께),기본이 400
+	//weight  폰트의 두께
+	//Italic  기울임(FALSE)
+	//underline  언더라인(FALSE)
+	//strikeout  가운데선(FALSE)
+	//charset  문자셋 설정(ANSI_CHARSET,HANGEUL_CHARSET)
+	//outprecision  출력정확도, 같은 이름의 폰트가 여러개 일때 쓰는거니까 상관ㄴㄴ
+	//clipprecicon  클리핑 정확도, 영역 벗어난 친구를 어떻게 할래?라는 것. 
+	//quality 논리적 폰트를 물리적 폰트에 얼마나 근접시킬 것이냐(말이 개어려운데 논리 폰트에 벗어나면 글자의 품질을 더 중요시한다 뭐 이런거라함
+	//pitchandfamily 폰트의 피치와 그룹(???)보통 가변 피치와 로만 그룹 씀(VARIABLE_PITCH|FF_ROMAN)안바꿔도될듯
+	//name 글꼴 이름 나타내는 문자열
+
+	switch (message)
+	{
+	case WM_CREATE:
+		bear.xPos = 85;
+		bear.yPos = HEIGHT - 200 - 65;
+		tiger.xPos = WIDTH - 85 - 125;
+		tiger.yPos = HEIGHT - 200 - 70-5;
+		SetTimer(hWnd, 0, 200, NULL);
+		break;
+
+	case WM_PAINT://배경, 스프라이트, 동굴에 쌓이는거(키다운에서 카운트하고 invalidrect하면 count개수만큼 비트맵 그림)
+		hdc = BeginPaint(hWnd, &ps);
+		memDC = CreateCompatibleDC(hdc);
+		//배경
+		hBit = LoadBitmap(hInst, MAKEINTRESOURCE(IDB_BITMAP7));
+		oldBit = (HBITMAP)SelectObject(memDC, hBit);
+		TransparentBlt(hdc, 0, 0, WIDTH, HEIGHT, memDC, 0, 0, 1024, 1024, RGB(0, 64, 128));
+
+		if (bear.isAttack == true) {
+			bearAttack(bear.xPos, bear.yPos, hdc);
+		}
+		else //곰움직임	
+			bearAnimation(bear.xPos, bear.yPos+15, hdc);
+
+		if (tiger.isAttack == true) {
+			tigerAttack(tiger.xPos, tiger.yPos, hdc);
+		}
+		else {//곰, 호랑이 움직임	
+			tigerAnimation(tiger.xPos, tiger.yPos+40, hdc);
+		}
+
+		//폰트~앞으로빼면 뭔진몰라도 안나오니 뒤로 빼자
+		font = CreateFont(80, 0, 0, 0, 0, 0, 0, 0, HANGEUL_CHARSET, 0, 0, 0, VARIABLE_PITCH | FF_ROMAN, TEXT("궁서"));
+		//폰트 이룸 중 띄어쓰기가 된 것은 적용안되는듯 멍청한 기계문명.... 인수가 14개이니까 주의하긔
+		oldfont = (HFONT)SelectObject(hdc, font);
+		SetBkMode(hdc, TRANSPARENT);//폰트배경 투명화
+		TextOut(hdc, 100, 100, str, strlen(str));
+		SelectObject(hdc, oldfont);
+		DeleteObject(font);
+
+		DeleteDC(memDC);
+		DeleteObject(hBit);
+		EndPaint(hWnd, &ps);
+		break;
+
+	case WM_TIMER://0번-움직임 1번-마늘, 마차 생성 텀
+		InvalidateRect(hWnd, NULL, FALSE);
+		break;
+
+	case WM_KEYDOWN:
+		//호랑이 움직임
+		if (GetAsyncKeyState(VK_DOWN) & 0x8000) {//공격
+			tiger.isAttack = true;
+		}
+		if (GetAsyncKeyState(VK_LEFT) & 0x8000) {
+			tiger.xPos -= 10;
+		}
+		if (GetAsyncKeyState(VK_RIGHT) & 0x8000) {
+			tiger.xPos += 10;
+		}
+		//곰 움직임
+		if (GetAsyncKeyState('S') & 0x8000) {//공격
+			bear.isAttack = true;
+		}
+		if (GetAsyncKeyState('A') & 0x8000) {
+			bear.xPos -= 10;
+		}
+		if (GetAsyncKeyState('D') & 0x8000) {
+			bear.xPos += 10;
+		}
+		break;
+
+	case WM_KEYUP:
+		break;
+
+	case WM_CHAR:
+		if (wParam == 'q') {
+			PostQuitMessage(0);
+		}
+		break;
+
+	case WM_DESTROY:
+		PostQuitMessage(0);
+		break;
+	default:
+		return DefWindowProc(hWnd, message, wParam, lParam);
+	}
+	return 0;
+}
+
+INT_PTR CALLBACK About(HWND hDlg, UINT message, WPARAM wParam, LPARAM lParam)
+{
+	UNREFERENCED_PARAMETER(lParam);
+	switch (message)
+	{
+	case WM_INITDIALOG:
+		return (INT_PTR)TRUE;
+
+	case WM_COMMAND:
+		if (LOWORD(wParam) == IDOK || LOWORD(wParam) == IDCANCEL)
+		{
+			EndDialog(hDlg, LOWORD(wParam));
+			return (INT_PTR)TRUE;
+		}
+		break;
+	}
+	return (INT_PTR)FALSE;
+}
