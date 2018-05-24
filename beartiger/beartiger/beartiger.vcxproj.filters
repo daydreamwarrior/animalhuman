@@ -105,6 +105,7 @@
     <Image Include="bear_attack6.bmp">
       <Filter>리소스 파일</Filter>
     </Image>
+<<<<<<< HEAD
     <Image Include="bear_attack1.bmp">
       <Filter>리소스 파일</Filter>
     </Image>
@@ -124,6 +125,18 @@
       <Filter>리소스 파일</Filter>
     </Image>
     <Image Include="garlicssuk.bmp">
+=======
+    <Image Include="tiger_Attack1.bmp">
+      <Filter>리소스 파일</Filter>
+    </Image>
+    <Image Include="tiger_Attack2.bmp">
+      <Filter>리소스 파일</Filter>
+    </Image>
+    <Image Include="tiger_Attack3.bmp">
+      <Filter>리소스 파일</Filter>
+    </Image>
+    <Image Include="tiger_Attack4.bmp">
+>>>>>>> c699b0a0e16281073050ea1772ea9c3ded45fbcf
       <Filter>리소스 파일</Filter>
     </Image>
   </ItemGroup>
