@@ -186,6 +186,8 @@
     <Image Include="tiger_Attack2.bmp" />
     <Image Include="tiger_Attack3.bmp" />
     <Image Include="tiger_Attack4.bmp" />
+    <Image Include="tiger_Attack5.bmp" />
+    <Image Include="tiger_Attack6.bmp" />
     <Image Include="tiger_Walk1.bmp" />
     <Image Include="tiger_Walk2.bmp" />
     <Image Include="tiger_Walk3.bmp" />
