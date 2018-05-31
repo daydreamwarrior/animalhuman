@@ -1,0 +1,39 @@
+void bearAnimation(int xPos, int yPos, HDC hdc) {
+	HDC memDC,stretchDC,backDC;
+	HBITMAP oldBit, stretchbit;
+
+	bear.movingCount++;
+	bear.movingCount = bear.movingCount % 6;
+	bear.Walk[0] = LoadBitmap(hInst, MAKEINTRESOURCE(IDB_BITMAP1));
+	bear.Walk[1] = LoadBitmap(hInst, MAKEINTRESOURCE(IDB_BITMAP2));
+	bear.Walk[2] = LoadBitmap(hInst, MAKEINTRESOURCE(IDB_BITMAP3));
+	bear.Walk[3] = LoadBitmap(hInst, MAKEINTRESOURCE(IDB_BITMAP4));
+	bear.Walk[4] = LoadBitmap(hInst, MAKEINTRESOURCE(IDB_BITMAP5));
+	bear.Walk[5] = LoadBitmap(hInst, MAKEINTRESOURCE(IDB_BITMAP6));
+
+	memDC = CreateCompatibleDC(hdc);
+	backDC = CreateCompatibleDC(hdc);
+	stretchDC = CreateCompatibleDC(hdc);
+
+	stretchbit = CreateCompatibleBitmap(hdc, 100, 100);
+	SelectObject(backDC, bear.Walk[bear.movingCount]);//backDC에다가 비트맵 저장하고
+	SelectObject(stretchDC, stretchbit);
+	
+	StretchBlt(stretchDC, 0, 0, 85, 65, backDC, 85, 0, -85, 65, SRCCOPY);//stretchDC에 반전해서 그리고
+	TransparentBlt(memDC, 0, 0, 85, 65, stretchDC, 0, 0, 85, 65, RGB(0, 64, 128));//받아서 memDC에 그림
+
+	BitBlt(hdc, xPos, yPos, 85, 65 , stretchDC, 0, 0, SRCCOPY);
+
+	//쓴거 삭제
+	for (int i = 0; i < 6; i++)
+		DeleteObject(bear.Walk[i]);
+	DeleteObject(stretchbit);
+	DeleteDC(stretchDC);
+	DeleteDC(backDC);
+
+	DeleteDC(memDC);
+	
+
+}
+
+//very difficult big stress
