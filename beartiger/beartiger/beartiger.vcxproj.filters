@@ -66,6 +66,14 @@
     <Image Include="tiger_Attack10.bmp" />
     <Image Include="tiger_Attack11.bmp" />
     <Image Include="tiger_Attack12.bmp" />
+    <Image Include="m3.bmp" />
+    <Image Include="m4.bmp" />
+    <Image Include="m5.bmp" />
+    <Image Include="m6.bmp" />
+    <Image Include="m7.bmp" />
+    <Image Include="m8.bmp">
+      <Filter>NewFilter1</Filter>
+    </Image>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="NewFilter1">
