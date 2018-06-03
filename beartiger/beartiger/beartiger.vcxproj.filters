@@ -74,6 +74,12 @@
     <Image Include="m8.bmp">
       <Filter>NewFilter1</Filter>
     </Image>
+    <Image Include="m3_left.bmp" />
+    <Image Include="m4_left.bmp" />
+    <Image Include="m5_left.bmp" />
+    <Image Include="m6_left.bmp" />
+    <Image Include="m7_left.bmp" />
+    <Image Include="m8_left.bmp" />
   </ItemGroup>
   <ItemGroup>
     <Filter Include="NewFilter1">
