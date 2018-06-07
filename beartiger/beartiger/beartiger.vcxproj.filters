@@ -23,6 +23,7 @@
     <Image Include="beartiger.ico" />
     <Image Include="small.ico" />
     <Image Include="m8.bmp">
+<<<<<<< HEAD
       <Filter>bitmap</Filter>
     </Image>
     <Image Include="bear_attack12.bmp">
@@ -208,6 +209,52 @@
     <Image Include="tiger_Attack3.bmp">
       <Filter>bitmap</Filter>
     </Image>
+=======
+      <Filter>NewFilter1</Filter>
+    </Image>
+    <Image Include="m3_left.bmp" />
+    <Image Include="m4_left.bmp" />
+    <Image Include="m5_left.bmp" />
+    <Image Include="m6_left.bmp" />
+    <Image Include="m7_left.bmp" />
+    <Image Include="m8_left.bmp" />
+    <Image Include="..\..\..\..\Desktop\딱따구리\bear\bear_feed1.bmp" />
+    <Image Include="..\..\..\..\Desktop\딱따구리\bear\bear_feed2.bmp" />
+    <Image Include="..\..\..\..\Desktop\딱따구리\bear\bear_feed3.bmp" />
+    <Image Include="..\..\..\..\Desktop\딱따구리\bear\bear_feed4.bmp" />
+    <Image Include="..\..\..\..\Desktop\딱따구리\bear\bear_feed5.bmp" />
+    <Image Include="..\..\..\..\Desktop\딱따구리\bear\bear_feed6.bmp" />
+    <Image Include="..\..\..\..\Desktop\딱따구리\bear\bear_feed7.bmp" />
+    <Image Include="..\..\..\..\Desktop\딱따구리\bear\bear_feed8.bmp" />
+    <Image Include="..\..\..\..\Desktop\딱따구리\bear\bear_feed9.bmp" />
+    <Image Include="..\..\..\..\Desktop\딱따구리\bear\bear_feed10.bmp" />
+    <Image Include="..\..\..\..\Desktop\딱따구리\bear\bear_feed11.bmp" />
+    <Image Include="..\..\..\..\Desktop\딱따구리\bear\bear_feed12.bmp" />
+    <Image Include="bear_feed1.bmp" />
+    <Image Include="bear_feed2.bmp" />
+    <Image Include="bear_feed3.bmp" />
+    <Image Include="bear_feed4.bmp" />
+    <Image Include="bear_feed5.bmp" />
+    <Image Include="bear_feed6.bmp" />
+    <Image Include="bear_feed7.bmp" />
+    <Image Include="bear_feed8.bmp" />
+    <Image Include="bear_feed9.bmp" />
+    <Image Include="bear_feed10.bmp" />
+    <Image Include="bear_feed11.bmp" />
+    <Image Include="bear_feed12.bmp" />
+    <Image Include="tiger_feed1.bmp" />
+    <Image Include="tiger_feed2.bmp" />
+    <Image Include="tiger_feed3.bmp" />
+    <Image Include="tiger_feed4.bmp" />
+    <Image Include="tiger_feed5.bmp" />
+    <Image Include="tiger_feed6.bmp" />
+    <Image Include="tiger_feed7.bmp" />
+    <Image Include="tiger_feed8.bmp" />
+    <Image Include="tiger_feed9.bmp" />
+    <Image Include="tiger_feed10.bmp" />
+    <Image Include="tiger_feed11.bmp" />
+    <Image Include="tiger_feed12.bmp" />
+>>>>>>> 290e299d8183148dea5473aeaa21da4d880dfc35
   </ItemGroup>
   <ItemGroup>
     <Filter Include="sound">
