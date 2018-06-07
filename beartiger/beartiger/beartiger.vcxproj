@@ -202,6 +202,8 @@
     <Image Include="bear_attack7.bmp" />
     <Image Include="bear_attack8.bmp" />
     <Image Include="bear_attack9.bmp" />
+    <Image Include="bear_damage1.bmp" />
+    <Image Include="bear_damage2.bmp" />
     <Image Include="bear_feed1.bmp" />
     <Image Include="bear_feed10.bmp" />
     <Image Include="bear_feed11.bmp" />
