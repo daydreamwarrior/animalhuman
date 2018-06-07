@@ -3,12 +3,18 @@
   <ItemGroup>
     <ClCompile Include="beartiger.cpp" />
     <ClCompile Include="stdafx.cpp" />
+    <ClCompile Include="Sound.cpp">
+      <Filter>NewFilter2</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="beartiger.h" />
     <ClInclude Include="Resource.h" />
     <ClInclude Include="stdafx.h" />
     <ClInclude Include="targetver.h" />
+    <ClInclude Include="Sound.h">
+      <Filter>NewFilter2</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="beartiger.rc" />
@@ -120,6 +126,9 @@
   <ItemGroup>
     <Filter Include="NewFilter1">
       <UniqueIdentifier>{5d2d9d03-ea76-4229-bef5-97be8aa2e38f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="NewFilter2">
+      <UniqueIdentifier>{667515a9-9cd6-42b8-85b1-3eb91a678010}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
 </Project>
