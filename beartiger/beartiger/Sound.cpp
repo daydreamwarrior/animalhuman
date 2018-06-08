@@ -41,6 +41,19 @@ void CSound::Add_sound()
 		, &pSound[1]
 	); //¿Ã∆Â∆Æ
 
+	pSystem->createSound(
+		"Sound/punch.mp3"
+		, FMOD_DEFAULT | FMOD_LOOP_OFF
+		, nullptr
+		, &pSound[2]
+	); //¿Ã∆Â∆Æ
+
+	pSystem->createSound(
+		"Sound/tigerhowl.mp3"
+		, FMOD_DEFAULT | FMOD_LOOP_OFF
+		, nullptr
+		, &pSound[3]
+	); //¿Ã∆Â∆Æ
 
 }
 

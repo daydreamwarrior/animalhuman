@@ -1,7 +1,7 @@
 #pragma once
 #include "FMOD\include\fmod.hpp"
 
-#define SOUND_NUM 3
+#define SOUND_NUM 10
 
 #pragma comment(lib, "FMOD/lib/fmod64_vc.lib")
 
