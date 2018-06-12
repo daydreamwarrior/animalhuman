@@ -344,6 +344,9 @@
     <Image Include="tiger_damage4.bmp">
       <Filter>Bitmap</Filter>
     </Image>
+    <Image Include="inventory.bmp" />
+    <Image Include="ending_bear.bmp" />
+    <Image Include="ending_tiger.bmp" />
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Bitmap">

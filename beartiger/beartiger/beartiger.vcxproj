@@ -230,7 +230,10 @@
     <Image Include="bear_walk7.bmp" />
     <Image Include="bear_walk8.bmp" />
     <Image Include="bear_walk9.bmp" />
+    <Image Include="ending_bear.bmp" />
+    <Image Include="ending_tiger.bmp" />
     <Image Include="garlicssuk.bmp" />
+    <Image Include="inventory.bmp" />
     <Image Include="m3.bmp" />
     <Image Include="m3_left.bmp" />
     <Image Include="m4.bmp" />
