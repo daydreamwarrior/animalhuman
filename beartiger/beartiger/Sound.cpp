@@ -42,18 +42,18 @@ void CSound::Add_sound()
 	); //이펙트
 
 	pSystem->createSound(
-		"Sound/punch.mp3"
+		"Sound/punch_cut.mp3"
 		, FMOD_DEFAULT | FMOD_LOOP_OFF
 		, nullptr
 		, &pSound[2]
-	); //이펙트
+	); //이펙트(맞을 때)
 
 	pSystem->createSound(
-		"Sound/tigerhowl.mp3"
+		"Sound/tiger_cut.mp3"
 		, FMOD_DEFAULT | FMOD_LOOP_OFF
 		, nullptr
 		, &pSound[3]
-	); //이펙트
+	); //이펙트, 공격 성공할 때
 
 }
 
