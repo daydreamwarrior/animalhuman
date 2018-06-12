@@ -53,7 +53,7 @@ void CSound::Add_sound()
 		, FMOD_DEFAULT | FMOD_LOOP_OFF
 		, nullptr
 		, &pSound[3]
-	); //이펙트, 공격 성공할 때
+	); //이펙트,공격 성공할 때
 
 }
 
