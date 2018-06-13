@@ -349,6 +349,7 @@
     <Image Include="ending_tiger.bmp" />
     <Image Include="sky_day.bmp" />
     <Image Include="sky_night.bmp" />
+    <Image Include="cave.bmp" />
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Bitmap">
