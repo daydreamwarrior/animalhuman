@@ -350,6 +350,9 @@
     <Image Include="sky_day.bmp" />
     <Image Include="sky_night.bmp" />
     <Image Include="cave.bmp" />
+    <Image Include="bitmap10.bmp" />
+    <Image Include="moon.bmp" />
+    <Image Include="sun.bmp" />
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Bitmap">
