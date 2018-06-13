@@ -347,6 +347,8 @@
     <Image Include="inventory.bmp" />
     <Image Include="ending_bear.bmp" />
     <Image Include="ending_tiger.bmp" />
+    <Image Include="sky_day.bmp" />
+    <Image Include="sky_night.bmp" />
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Bitmap">
