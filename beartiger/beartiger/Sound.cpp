@@ -28,18 +28,18 @@ CSound::~CSound()
 void CSound::Add_sound()
 {
 	pSystem->createStream(
-		"Sound/Electrodoodle.mp3"
+		"Sound/handclap_ingame.mp3"
 		, FMOD_2D | FMOD_LOOP_NORMAL
 		, nullptr
 		, &pSound[0]
 	); // 배경음 사운드
 
 	pSystem->createSound(
-		"Sound/Skill1.wav"
+		"Sound/jppark_opning.wav"
 		, FMOD_DEFAULT | FMOD_LOOP_OFF
 		, nullptr
 		, &pSound[1]
-	); //이펙트
+	); //오프닝 브금
 
 	pSystem->createSound(
 		"Sound/punch_cut.mp3"
@@ -54,6 +54,13 @@ void CSound::Add_sound()
 		, nullptr
 		, &pSound[3]
 	); //이펙트,공격 성공할 때
+
+	pSystem->createSound(
+		"Sound/ending_cut.mp3"
+		, FMOD_DEFAULT | FMOD_LOOP_OFF
+		, nullptr
+		, &pSound[4]
+	); //엔딩화면 브금
 
 }
 
