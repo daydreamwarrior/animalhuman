@@ -62,6 +62,13 @@ void CSound::Add_sound()
 		, &pSound[4]
 	); //엔딩화면 브금
 
+	pSystem->createSound(
+		"Sound/garlic_save.wav"
+		, FMOD_DEFAULT | FMOD_LOOP_OFF
+		, nullptr
+		, &pSound[5]
+	); //동굴 저장 시 효과음
+
 }
 
 void CSound::Play(int n)
