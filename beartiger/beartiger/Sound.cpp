@@ -28,7 +28,7 @@ CSound::~CSound()
 void CSound::Add_sound()
 {
 	pSystem->createStream(
-		"Sound/handclap_ingame.mp3"
+		"Sound/handclap_ingame_vol.mp3"
 		, FMOD_2D | FMOD_LOOP_NORMAL
 		, nullptr
 		, &pSound[0]
