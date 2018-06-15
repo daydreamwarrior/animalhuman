@@ -35,7 +35,7 @@ void CSound::Add_sound()
 	); // 배경음 사운드
 
 	pSystem->createSound(
-		"Sound/jppark_opning.wav"
+		"Sound/jppark_opening.mp3"
 		, FMOD_DEFAULT | FMOD_LOOP_OFF
 		, nullptr
 		, &pSound[1]
