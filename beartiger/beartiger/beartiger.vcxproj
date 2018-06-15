@@ -224,6 +224,7 @@
     <Image Include="ending_fail.bmp" />
     <Image Include="ending_tiger.bmp" />
     <Image Include="garlicssuk.bmp" />
+    <Image Include="howto.bmp" />
     <Image Include="inventory.bmp" />
     <Image Include="m3.bmp" />
     <Image Include="m3_left.bmp" />

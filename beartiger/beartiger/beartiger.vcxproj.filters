@@ -336,6 +336,7 @@
       <Filter>BITMAP</Filter>
     </Image>
     <Image Include="title.bmp" />
+    <Image Include="howto.bmp" />
   </ItemGroup>
   <ItemGroup>
     <Filter Include="BITMAP">
