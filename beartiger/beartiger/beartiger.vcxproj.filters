@@ -1,23 +1,19 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
+    <ClCompile Include="beartiger.cpp" />
     <ClCompile Include="stdafx.cpp" />
     <ClCompile Include="Sound.cpp">
       <Filter>Sound</Filter>
     </ClCompile>
-    <ClCompile Include="beartiger.cpp">
-      <Filter>beartiger</Filter>
-    </ClCompile>
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="beartiger.h" />
     <ClInclude Include="Resource.h" />
     <ClInclude Include="stdafx.h" />
     <ClInclude Include="targetver.h" />
     <ClInclude Include="Sound.h">
       <Filter>Sound</Filter>
-    </ClInclude>
-    <ClInclude Include="beartiger.h">
-      <Filter>beartiger</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -25,366 +21,328 @@
   </ItemGroup>
   <ItemGroup>
     <Image Include="beartiger.ico" />
+    <Image Include="bitmap10.bmp" />
     <Image Include="small.ico" />
     <Image Include="background_day.bmp">
-      <Filter>Bitmap</Filter>
+      <Filter>BITMAP</Filter>
     </Image>
     <Image Include="bear_attack1.bmp">
-      <Filter>Bitmap</Filter>
+      <Filter>BITMAP</Filter>
     </Image>
     <Image Include="bear_attack2.bmp">
-      <Filter>Bitmap</Filter>
+      <Filter>BITMAP</Filter>
     </Image>
     <Image Include="bear_attack3.bmp">
-      <Filter>Bitmap</Filter>
+      <Filter>BITMAP</Filter>
     </Image>
     <Image Include="bear_attack4.bmp">
-      <Filter>Bitmap</Filter>
+      <Filter>BITMAP</Filter>
     </Image>
     <Image Include="bear_attack5.bmp">
-      <Filter>Bitmap</Filter>
+      <Filter>BITMAP</Filter>
     </Image>
     <Image Include="bear_attack6.bmp">
-      <Filter>Bitmap</Filter>
+      <Filter>BITMAP</Filter>
     </Image>
     <Image Include="bear_attack7.bmp">
-      <Filter>Bitmap</Filter>
+      <Filter>BITMAP</Filter>
     </Image>
     <Image Include="bear_attack8.bmp">
-      <Filter>Bitmap</Filter>
+      <Filter>BITMAP</Filter>
     </Image>
     <Image Include="bear_attack9.bmp">
-      <Filter>Bitmap</Filter>
+      <Filter>BITMAP</Filter>
     </Image>
     <Image Include="bear_attack10.bmp">
-      <Filter>Bitmap</Filter>
+      <Filter>BITMAP</Filter>
     </Image>
     <Image Include="bear_attack11.bmp">
-      <Filter>Bitmap</Filter>
+      <Filter>BITMAP</Filter>
     </Image>
     <Image Include="bear_attack12.bmp">
-      <Filter>Bitmap</Filter>
+      <Filter>BITMAP</Filter>
     </Image>
     <Image Include="bear_damage1.bmp">
-      <Filter>Bitmap</Filter>
+      <Filter>BITMAP</Filter>
     </Image>
     <Image Include="bear_damage2.bmp">
-      <Filter>Bitmap</Filter>
-    </Image>
-    <Image Include="..\..\..\..\Desktop\딱따구리\bear\bear_feed1.bmp">
-      <Filter>Bitmap</Filter>
-    </Image>
-    <Image Include="bear_feed1.bmp">
-      <Filter>Bitmap</Filter>
-    </Image>
-    <Image Include="..\..\..\..\Desktop\딱따구리\bear\bear_feed2.bmp">
-      <Filter>Bitmap</Filter>
-    </Image>
-    <Image Include="bear_feed2.bmp">
-      <Filter>Bitmap</Filter>
-    </Image>
-    <Image Include="..\..\..\..\Desktop\딱따구리\bear\bear_feed3.bmp">
-      <Filter>Bitmap</Filter>
-    </Image>
-    <Image Include="bear_feed3.bmp">
-      <Filter>Bitmap</Filter>
-    </Image>
-    <Image Include="..\..\..\..\Desktop\딱따구리\bear\bear_feed4.bmp">
-      <Filter>Bitmap</Filter>
-    </Image>
-    <Image Include="bear_feed4.bmp">
-      <Filter>Bitmap</Filter>
-    </Image>
-    <Image Include="..\..\..\..\Desktop\딱따구리\bear\bear_feed5.bmp">
-      <Filter>Bitmap</Filter>
-    </Image>
-    <Image Include="bear_feed5.bmp">
-      <Filter>Bitmap</Filter>
-    </Image>
-    <Image Include="..\..\..\..\Desktop\딱따구리\bear\bear_feed6.bmp">
-      <Filter>Bitmap</Filter>
-    </Image>
-    <Image Include="bear_feed6.bmp">
-      <Filter>Bitmap</Filter>
-    </Image>
-    <Image Include="bear_feed7.bmp">
-      <Filter>Bitmap</Filter>
-    </Image>
-    <Image Include="..\..\..\..\Desktop\딱따구리\bear\bear_feed7.bmp">
-      <Filter>Bitmap</Filter>
-    </Image>
-    <Image Include="..\..\..\..\Desktop\딱따구리\bear\bear_feed8.bmp">
-      <Filter>Bitmap</Filter>
-    </Image>
-    <Image Include="bear_feed8.bmp">
-      <Filter>Bitmap</Filter>
-    </Image>
-    <Image Include="bear_feed9.bmp">
-      <Filter>Bitmap</Filter>
-    </Image>
-    <Image Include="..\..\..\..\Desktop\딱따구리\bear\bear_feed9.bmp">
-      <Filter>Bitmap</Filter>
-    </Image>
-    <Image Include="bear_feed10.bmp">
-      <Filter>Bitmap</Filter>
-    </Image>
-    <Image Include="..\..\..\..\Desktop\딱따구리\bear\bear_feed10.bmp">
-      <Filter>Bitmap</Filter>
-    </Image>
-    <Image Include="bear_feed11.bmp">
-      <Filter>Bitmap</Filter>
-    </Image>
-    <Image Include="..\..\..\..\Desktop\딱따구리\bear\bear_feed11.bmp">
-      <Filter>Bitmap</Filter>
-    </Image>
-    <Image Include="bear_feed12.bmp">
-      <Filter>Bitmap</Filter>
-    </Image>
-    <Image Include="..\..\..\..\Desktop\딱따구리\bear\bear_feed12.bmp">
-      <Filter>Bitmap</Filter>
-    </Image>
-    <Image Include="bear_walk1.bmp">
-      <Filter>Bitmap</Filter>
-    </Image>
-    <Image Include="bear_walk2.bmp">
-      <Filter>Bitmap</Filter>
-    </Image>
-    <Image Include="bear_walk3.bmp">
-      <Filter>Bitmap</Filter>
-    </Image>
-    <Image Include="bear_walk4.bmp">
-      <Filter>Bitmap</Filter>
-    </Image>
-    <Image Include="bear_walk5.bmp">
-      <Filter>Bitmap</Filter>
-    </Image>
-    <Image Include="bear_walk6.bmp">
-      <Filter>Bitmap</Filter>
-    </Image>
-    <Image Include="bear_walk7.bmp">
-      <Filter>Bitmap</Filter>
-    </Image>
-    <Image Include="bear_walk8.bmp">
-      <Filter>Bitmap</Filter>
-    </Image>
-    <Image Include="bear_walk9.bmp">
-      <Filter>Bitmap</Filter>
-    </Image>
-    <Image Include="bear_walk10.bmp">
-      <Filter>Bitmap</Filter>
-    </Image>
-    <Image Include="bear_walk11.bmp">
-      <Filter>Bitmap</Filter>
-    </Image>
-    <Image Include="bear_walk12.bmp">
-      <Filter>Bitmap</Filter>
-    </Image>
-    <Image Include="garlicssuk.bmp">
-      <Filter>Bitmap</Filter>
-    </Image>
-    <Image Include="m3.bmp">
-      <Filter>Bitmap</Filter>
-    </Image>
-    <Image Include="m3_left.bmp">
-      <Filter>Bitmap</Filter>
-    </Image>
-    <Image Include="m4_left.bmp">
-      <Filter>Bitmap</Filter>
-    </Image>
-    <Image Include="m4.bmp">
-      <Filter>Bitmap</Filter>
-    </Image>
-    <Image Include="m5.bmp">
-      <Filter>Bitmap</Filter>
-    </Image>
-    <Image Include="m5_left.bmp">
-      <Filter>Bitmap</Filter>
-    </Image>
-    <Image Include="m6.bmp">
-      <Filter>Bitmap</Filter>
-    </Image>
-    <Image Include="m6_left.bmp">
-      <Filter>Bitmap</Filter>
-    </Image>
-    <Image Include="m7.bmp">
-      <Filter>Bitmap</Filter>
-    </Image>
-    <Image Include="m7_left.bmp">
-      <Filter>Bitmap</Filter>
-    </Image>
-    <Image Include="m8.bmp">
-      <Filter>Bitmap</Filter>
-    </Image>
-    <Image Include="m8_left.bmp">
-      <Filter>Bitmap</Filter>
-    </Image>
-    <Image Include="tiger_Attack1.bmp">
-      <Filter>Bitmap</Filter>
-    </Image>
-    <Image Include="tiger_Attack2.bmp">
-      <Filter>Bitmap</Filter>
-    </Image>
-    <Image Include="tiger_Attack4.bmp">
-      <Filter>Bitmap</Filter>
-    </Image>
-    <Image Include="tiger_Attack5.bmp">
-      <Filter>Bitmap</Filter>
-    </Image>
-    <Image Include="tiger_Attack3.bmp">
-      <Filter>Bitmap</Filter>
-    </Image>
-    <Image Include="tiger_Attack6.bmp">
-      <Filter>Bitmap</Filter>
-    </Image>
-    <Image Include="tiger_Attack8.bmp">
-      <Filter>Bitmap</Filter>
-    </Image>
-    <Image Include="tiger_Attack7.bmp">
-      <Filter>Bitmap</Filter>
-    </Image>
-    <Image Include="tiger_Attack9.bmp">
-      <Filter>Bitmap</Filter>
-    </Image>
-    <Image Include="tiger_Attack10.bmp">
-      <Filter>Bitmap</Filter>
-    </Image>
-    <Image Include="tiger_Attack11.bmp">
-      <Filter>Bitmap</Filter>
-    </Image>
-    <Image Include="tiger_Attack12.bmp">
-      <Filter>Bitmap</Filter>
-    </Image>
-    <Image Include="tiger_feed3.bmp">
-      <Filter>Bitmap</Filter>
-    </Image>
-    <Image Include="tiger_feed2.bmp">
-      <Filter>Bitmap</Filter>
-    </Image>
-    <Image Include="tiger_feed1.bmp">
-      <Filter>Bitmap</Filter>
-    </Image>
-    <Image Include="tiger_feed5.bmp">
-      <Filter>Bitmap</Filter>
-    </Image>
-    <Image Include="tiger_feed4.bmp">
-      <Filter>Bitmap</Filter>
-    </Image>
-    <Image Include="tiger_feed6.bmp">
-      <Filter>Bitmap</Filter>
-    </Image>
-    <Image Include="tiger_feed8.bmp">
-      <Filter>Bitmap</Filter>
-    </Image>
-    <Image Include="tiger_feed7.bmp">
-      <Filter>Bitmap</Filter>
-    </Image>
-    <Image Include="tiger_feed9.bmp">
-      <Filter>Bitmap</Filter>
-    </Image>
-    <Image Include="tiger_feed10.bmp">
-      <Filter>Bitmap</Filter>
-    </Image>
-    <Image Include="tiger_feed12.bmp">
-      <Filter>Bitmap</Filter>
-    </Image>
-    <Image Include="tiger_feed11.bmp">
-      <Filter>Bitmap</Filter>
-    </Image>
-    <Image Include="tiger_Walk1.bmp">
-      <Filter>Bitmap</Filter>
-    </Image>
-    <Image Include="tiger_Walk2.bmp">
-      <Filter>Bitmap</Filter>
-    </Image>
-    <Image Include="tiger_Walk3.bmp">
-      <Filter>Bitmap</Filter>
-    </Image>
-    <Image Include="tiger_Walk4.bmp">
-      <Filter>Bitmap</Filter>
-    </Image>
-    <Image Include="tiger_Walk5.bmp">
-      <Filter>Bitmap</Filter>
-    </Image>
-    <Image Include="tiger_Walk6.bmp">
-      <Filter>Bitmap</Filter>
-    </Image>
-    <Image Include="tiger_Walk8.bmp">
-      <Filter>Bitmap</Filter>
-    </Image>
-    <Image Include="tiger_Walk7.bmp">
-      <Filter>Bitmap</Filter>
-    </Image>
-    <Image Include="tiger_Walk9.bmp">
-      <Filter>Bitmap</Filter>
-    </Image>
-    <Image Include="tiger_Walk11.bmp">
-      <Filter>Bitmap</Filter>
-    </Image>
-    <Image Include="tiger_Walk10.bmp">
-      <Filter>Bitmap</Filter>
-    </Image>
-    <Image Include="tiger_Walk12.bmp">
-      <Filter>Bitmap</Filter>
+      <Filter>BITMAP</Filter>
     </Image>
     <Image Include="bear_damage3.bmp">
-      <Filter>Bitmap</Filter>
+      <Filter>BITMAP</Filter>
     </Image>
     <Image Include="bear_damage4.bmp">
-      <Filter>Bitmap</Filter>
+      <Filter>BITMAP</Filter>
     </Image>
-    <Image Include="tiger_damage1.bmp">
-      <Filter>Bitmap</Filter>
+    <Image Include="bear_feed1.bmp">
+      <Filter>BITMAP</Filter>
     </Image>
-    <Image Include="tiger_damage2.bmp">
-      <Filter>Bitmap</Filter>
+    <Image Include="bear_feed2.bmp">
+      <Filter>BITMAP</Filter>
     </Image>
-    <Image Include="tiger_damage3.bmp">
-      <Filter>Bitmap</Filter>
+    <Image Include="bear_feed3.bmp">
+      <Filter>BITMAP</Filter>
     </Image>
-    <Image Include="tiger_damage4.bmp">
-      <Filter>Bitmap</Filter>
+    <Image Include="bear_feed4.bmp">
+      <Filter>BITMAP</Filter>
     </Image>
-    <Image Include="bitmap10.bmp" />
-<<<<<<< HEAD
-    <Image Include="moon.bmp" />
-    <Image Include="sun.bmp" />
-    <Image Include="ending_fail.bmp" />
-=======
-    <Image Include="sun.bmp">
-      <Filter>Bitmap</Filter>
+    <Image Include="bear_feed5.bmp">
+      <Filter>BITMAP</Filter>
+    </Image>
+    <Image Include="bear_feed6.bmp">
+      <Filter>BITMAP</Filter>
+    </Image>
+    <Image Include="bear_feed7.bmp">
+      <Filter>BITMAP</Filter>
+    </Image>
+    <Image Include="bear_feed8.bmp">
+      <Filter>BITMAP</Filter>
+    </Image>
+    <Image Include="bear_feed9.bmp">
+      <Filter>BITMAP</Filter>
+    </Image>
+    <Image Include="bear_feed10.bmp">
+      <Filter>BITMAP</Filter>
+    </Image>
+    <Image Include="bear_feed11.bmp">
+      <Filter>BITMAP</Filter>
+    </Image>
+    <Image Include="bear_feed12.bmp">
+      <Filter>BITMAP</Filter>
+    </Image>
+    <Image Include="bear_walk1.bmp">
+      <Filter>BITMAP</Filter>
+    </Image>
+    <Image Include="bear_walk2.bmp">
+      <Filter>BITMAP</Filter>
+    </Image>
+    <Image Include="bear_walk3.bmp">
+      <Filter>BITMAP</Filter>
+    </Image>
+    <Image Include="bear_walk4.bmp">
+      <Filter>BITMAP</Filter>
+    </Image>
+    <Image Include="bear_walk5.bmp">
+      <Filter>BITMAP</Filter>
+    </Image>
+    <Image Include="bear_walk6.bmp">
+      <Filter>BITMAP</Filter>
+    </Image>
+    <Image Include="bear_walk7.bmp">
+      <Filter>BITMAP</Filter>
+    </Image>
+    <Image Include="bear_walk8.bmp">
+      <Filter>BITMAP</Filter>
+    </Image>
+    <Image Include="bear_walk9.bmp">
+      <Filter>BITMAP</Filter>
+    </Image>
+    <Image Include="bear_walk10.bmp">
+      <Filter>BITMAP</Filter>
+    </Image>
+    <Image Include="bear_walk11.bmp">
+      <Filter>BITMAP</Filter>
+    </Image>
+    <Image Include="bear_walk12.bmp">
+      <Filter>BITMAP</Filter>
     </Image>
     <Image Include="cave.bmp">
-      <Filter>Bitmap</Filter>
+      <Filter>BITMAP</Filter>
     </Image>
     <Image Include="ending_bear.bmp">
-      <Filter>Bitmap</Filter>
+      <Filter>BITMAP</Filter>
+    </Image>
+    <Image Include="ending_fail.bmp">
+      <Filter>BITMAP</Filter>
     </Image>
     <Image Include="ending_tiger.bmp">
-      <Filter>Bitmap</Filter>
+      <Filter>BITMAP</Filter>
+    </Image>
+    <Image Include="garlicssuk.bmp">
+      <Filter>BITMAP</Filter>
     </Image>
     <Image Include="inventory.bmp">
-      <Filter>Bitmap</Filter>
+      <Filter>BITMAP</Filter>
+    </Image>
+    <Image Include="m3.bmp">
+      <Filter>BITMAP</Filter>
+    </Image>
+    <Image Include="m3_left.bmp">
+      <Filter>BITMAP</Filter>
+    </Image>
+    <Image Include="m4.bmp">
+      <Filter>BITMAP</Filter>
+    </Image>
+    <Image Include="m4_left.bmp">
+      <Filter>BITMAP</Filter>
+    </Image>
+    <Image Include="m5.bmp">
+      <Filter>BITMAP</Filter>
+    </Image>
+    <Image Include="m5_left.bmp">
+      <Filter>BITMAP</Filter>
+    </Image>
+    <Image Include="m6.bmp">
+      <Filter>BITMAP</Filter>
+    </Image>
+    <Image Include="m6_left.bmp">
+      <Filter>BITMAP</Filter>
+    </Image>
+    <Image Include="m7.bmp">
+      <Filter>BITMAP</Filter>
+    </Image>
+    <Image Include="m7_left.bmp">
+      <Filter>BITMAP</Filter>
+    </Image>
+    <Image Include="m8.bmp">
+      <Filter>BITMAP</Filter>
+    </Image>
+    <Image Include="m8_left.bmp">
+      <Filter>BITMAP</Filter>
     </Image>
     <Image Include="moon.bmp">
-      <Filter>Bitmap</Filter>
+      <Filter>BITMAP</Filter>
     </Image>
     <Image Include="sky_day.bmp">
-      <Filter>Bitmap</Filter>
+      <Filter>BITMAP</Filter>
     </Image>
     <Image Include="sky_night.bmp">
-      <Filter>Bitmap</Filter>
+      <Filter>BITMAP</Filter>
     </Image>
->>>>>>> 30c5f3a816b64a72bb85a2ea734486fbe5609634
+    <Image Include="tiger_Attack1.bmp">
+      <Filter>BITMAP</Filter>
+    </Image>
+    <Image Include="tiger_Attack2.bmp">
+      <Filter>BITMAP</Filter>
+    </Image>
+    <Image Include="tiger_Attack3.bmp">
+      <Filter>BITMAP</Filter>
+    </Image>
+    <Image Include="tiger_Attack4.bmp">
+      <Filter>BITMAP</Filter>
+    </Image>
+    <Image Include="tiger_Attack5.bmp">
+      <Filter>BITMAP</Filter>
+    </Image>
+    <Image Include="tiger_Attack6.bmp">
+      <Filter>BITMAP</Filter>
+    </Image>
+    <Image Include="tiger_Attack7.bmp">
+      <Filter>BITMAP</Filter>
+    </Image>
+    <Image Include="tiger_Attack8.bmp">
+      <Filter>BITMAP</Filter>
+    </Image>
+    <Image Include="tiger_Attack9.bmp">
+      <Filter>BITMAP</Filter>
+    </Image>
+    <Image Include="tiger_Attack10.bmp">
+      <Filter>BITMAP</Filter>
+    </Image>
+    <Image Include="tiger_Attack11.bmp">
+      <Filter>BITMAP</Filter>
+    </Image>
+    <Image Include="tiger_Attack12.bmp">
+      <Filter>BITMAP</Filter>
+    </Image>
+    <Image Include="tiger_damage1.bmp">
+      <Filter>BITMAP</Filter>
+    </Image>
+    <Image Include="tiger_damage2.bmp">
+      <Filter>BITMAP</Filter>
+    </Image>
+    <Image Include="tiger_damage3.bmp">
+      <Filter>BITMAP</Filter>
+    </Image>
+    <Image Include="tiger_damage4.bmp">
+      <Filter>BITMAP</Filter>
+    </Image>
+    <Image Include="tiger_feed1.bmp">
+      <Filter>BITMAP</Filter>
+    </Image>
+    <Image Include="tiger_feed2.bmp">
+      <Filter>BITMAP</Filter>
+    </Image>
+    <Image Include="tiger_feed3.bmp">
+      <Filter>BITMAP</Filter>
+    </Image>
+    <Image Include="tiger_feed4.bmp">
+      <Filter>BITMAP</Filter>
+    </Image>
+    <Image Include="tiger_feed5.bmp">
+      <Filter>BITMAP</Filter>
+    </Image>
+    <Image Include="tiger_feed6.bmp">
+      <Filter>BITMAP</Filter>
+    </Image>
+    <Image Include="tiger_feed7.bmp">
+      <Filter>BITMAP</Filter>
+    </Image>
+    <Image Include="tiger_feed8.bmp">
+      <Filter>BITMAP</Filter>
+    </Image>
+    <Image Include="tiger_feed9.bmp">
+      <Filter>BITMAP</Filter>
+    </Image>
+    <Image Include="tiger_feed10.bmp">
+      <Filter>BITMAP</Filter>
+    </Image>
+    <Image Include="tiger_feed11.bmp">
+      <Filter>BITMAP</Filter>
+    </Image>
+    <Image Include="tiger_feed12.bmp">
+      <Filter>BITMAP</Filter>
+    </Image>
+    <Image Include="tiger_Walk1.bmp">
+      <Filter>BITMAP</Filter>
+    </Image>
+    <Image Include="tiger_Walk2.bmp">
+      <Filter>BITMAP</Filter>
+    </Image>
+    <Image Include="tiger_Walk3.bmp">
+      <Filter>BITMAP</Filter>
+    </Image>
+    <Image Include="tiger_Walk4.bmp">
+      <Filter>BITMAP</Filter>
+    </Image>
+    <Image Include="tiger_Walk5.bmp">
+      <Filter>BITMAP</Filter>
+    </Image>
+    <Image Include="tiger_Walk6.bmp">
+      <Filter>BITMAP</Filter>
+    </Image>
+    <Image Include="tiger_Walk7.bmp">
+      <Filter>BITMAP</Filter>
+    </Image>
+    <Image Include="tiger_Walk8.bmp">
+      <Filter>BITMAP</Filter>
+    </Image>
+    <Image Include="tiger_Walk9.bmp">
+      <Filter>BITMAP</Filter>
+    </Image>
+    <Image Include="tiger_Walk10.bmp">
+      <Filter>BITMAP</Filter>
+    </Image>
+    <Image Include="tiger_Walk11.bmp">
+      <Filter>BITMAP</Filter>
+    </Image>
+    <Image Include="tiger_Walk12.bmp">
+      <Filter>BITMAP</Filter>
+    </Image>
+    <Image Include="sun.bmp">
+      <Filter>BITMAP</Filter>
+    </Image>
+    <Image Include="pause.bmp">
+      <Filter>BITMAP</Filter>
+    </Image>
+    <Image Include="title.bmp" />
   </ItemGroup>
   <ItemGroup>
-    <Filter Include="Bitmap">
-      <UniqueIdentifier>{3790e702-bb05-4d79-8de0-744aa7c15de2}</UniqueIdentifier>
+    <Filter Include="BITMAP">
+      <UniqueIdentifier>{db0f042f-af63-4ed9-8dd8-54ce554e43e0}</UniqueIdentifier>
     </Filter>
     <Filter Include="Sound">
-      <UniqueIdentifier>{e1604883-bbdf-4b12-b943-3b09c5838f01}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="beartiger">
-      <UniqueIdentifier>{fbd90923-aaed-4de9-b19d-b1aabb1624cb}</UniqueIdentifier>
+      <UniqueIdentifier>{83ecb2a8-14ae-4f57-9e91-67dbd43450cb}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
 </Project>
