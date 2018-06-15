@@ -69,6 +69,14 @@ void CSound::Add_sound()
 		, &pSound[5]
 	); //동굴 저장 시 효과음
 
+	pSystem->createSound(
+		"Sound/badending_cut.mp3"
+		, FMOD_DEFAULT | FMOD_LOOP_OFF
+		, nullptr
+		, &pSound[6]
+	); //동굴 저장 시 효과음
+
+
 }
 
 void CSound::Play(int n)
