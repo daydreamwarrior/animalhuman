@@ -233,6 +233,7 @@
     <Image Include="bitmap10.bmp" />
     <Image Include="cave.bmp" />
     <Image Include="ending_bear.bmp" />
+    <Image Include="ending_fail.bmp" />
     <Image Include="ending_tiger.bmp" />
     <Image Include="garlicssuk.bmp" />
     <Image Include="inventory.bmp" />

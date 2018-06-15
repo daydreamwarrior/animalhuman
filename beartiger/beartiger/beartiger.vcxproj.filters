@@ -353,6 +353,7 @@
     <Image Include="bitmap10.bmp" />
     <Image Include="moon.bmp" />
     <Image Include="sun.bmp" />
+    <Image Include="ending_fail.bmp" />
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Bitmap">
