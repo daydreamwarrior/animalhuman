@@ -344,15 +344,31 @@
     <Image Include="tiger_damage4.bmp">
       <Filter>Bitmap</Filter>
     </Image>
-    <Image Include="inventory.bmp" />
-    <Image Include="ending_bear.bmp" />
-    <Image Include="ending_tiger.bmp" />
-    <Image Include="sky_day.bmp" />
-    <Image Include="sky_night.bmp" />
-    <Image Include="cave.bmp" />
     <Image Include="bitmap10.bmp" />
-    <Image Include="moon.bmp" />
-    <Image Include="sun.bmp" />
+    <Image Include="sun.bmp">
+      <Filter>Bitmap</Filter>
+    </Image>
+    <Image Include="cave.bmp">
+      <Filter>Bitmap</Filter>
+    </Image>
+    <Image Include="ending_bear.bmp">
+      <Filter>Bitmap</Filter>
+    </Image>
+    <Image Include="ending_tiger.bmp">
+      <Filter>Bitmap</Filter>
+    </Image>
+    <Image Include="inventory.bmp">
+      <Filter>Bitmap</Filter>
+    </Image>
+    <Image Include="moon.bmp">
+      <Filter>Bitmap</Filter>
+    </Image>
+    <Image Include="sky_day.bmp">
+      <Filter>Bitmap</Filter>
+    </Image>
+    <Image Include="sky_night.bmp">
+      <Filter>Bitmap</Filter>
+    </Image>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Bitmap">
