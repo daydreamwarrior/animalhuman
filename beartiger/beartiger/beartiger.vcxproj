@@ -218,7 +218,6 @@
     <Image Include="bear_walk7.bmp" />
     <Image Include="bear_walk8.bmp" />
     <Image Include="bear_walk9.bmp" />
-    <Image Include="bitmap10.bmp" />
     <Image Include="cave.bmp" />
     <Image Include="ending_bear.bmp" />
     <Image Include="ending_fail.bmp" />

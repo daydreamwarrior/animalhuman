@@ -21,7 +21,6 @@
   </ItemGroup>
   <ItemGroup>
     <Image Include="beartiger.ico" />
-    <Image Include="bitmap10.bmp" />
     <Image Include="small.ico" />
     <Image Include="background_day.bmp">
       <Filter>BITMAP</Filter>
